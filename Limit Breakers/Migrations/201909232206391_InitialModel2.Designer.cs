@@ -7,13 +7,13 @@ namespace Limit_Breakers.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class InitialModelforce : IMigrationMetadata
+    public sealed partial class InitialModel2 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialModelforce));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialModel2));
         
         string IMigrationMetadata.Id
         {
-            get { return "201909202103145_InitialModel-force"; }
+            get { return "201909232206391_InitialModel2"; }
         }
         
         string IMigrationMetadata.Source
