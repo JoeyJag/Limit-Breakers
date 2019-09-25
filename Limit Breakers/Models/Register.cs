@@ -15,6 +15,7 @@ namespace Limit_Breakers.Models
         public int UserID { get; set; }
         [DisplayName("Email Address:")]
         [Required(ErrorMessage = "Please enter your Email Address")]
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
         [MinLength(4)]
         [DisplayName("Username:")]
@@ -23,7 +24,13 @@ namespace Limit_Breakers.Models
         [MinLength(5)]
         [DisplayName("Password:")]
         [Required(ErrorMessage = "Please enter a Password")]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
+        [MinLength(5)]
+        [DisplayName("Confirm Password:")]
+        [Required(ErrorMessage = "Please Confirm Password")]
+        [DataType(DataType.Password)]
+        public string ConfirmPassword { get; set; }
         [DisplayName("Tokens:")]
         [Required(ErrorMessage = "Please enter amount of Tokens")]
         public int Tokens { get; set; }

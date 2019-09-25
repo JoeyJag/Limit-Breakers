@@ -46,7 +46,7 @@ namespace Limit_Breakers.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserID,Email,Username,Password,Tokens,PhoneNumber,UserType")] Register register)
+        public ActionResult Create([Bind(Include = "UserID,Email,Username,Password,ConfirmPassword,Tokens,PhoneNumber,UserType")] Register register)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace Limit_Breakers.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "UserID,Email,Username,Password,Tokens,PhoneNumber,UserType")] Register register)
+        public ActionResult Edit([Bind(Include = "UserID,Email,Username,Password,ConfirmPassword,Tokens,PhoneNumber,UserType")] Register register)
         {
             if (ModelState.IsValid)
             {
@@ -123,5 +123,31 @@ namespace Limit_Breakers.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Login(Register reg)
+        {
+            if (ModelState.IsValid)
+            {
+                using (RiotContext db = new RiotContext())
+                {
+                    var obj = db.Register.Where(r => r.Email.Equals(reg.Email) && r.Password.Equals(reg.Password)).FirstOrDefault();
+                    if (obj != null)
+                    {
+                        Session["UserID"] = obj.UserID.ToString();
+                        Session["Email"] = obj.Email.ToString();
+                        return RedirectToAction("Index");
+                    }
+                }
+            }
+            return View(reg);
+        }
+
     }
 }

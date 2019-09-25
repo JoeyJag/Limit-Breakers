@@ -9,7 +9,7 @@ namespace Limit_Breakers.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             ContextKey = "Limit_Breakers.Models.RiotContext";
         }
 

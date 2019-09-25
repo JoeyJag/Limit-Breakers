@@ -147,13 +147,9 @@
     <Compile Include="Migrations\201909202002206_InitialCreate.Designer.cs">
       <DependentUpon>201909202002206_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201909202048421_InitialModel.cs" />
-    <Compile Include="Migrations\201909202048421_InitialModel.Designer.cs">
-      <DependentUpon>201909202048421_InitialModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909232206391_InitialModel2.cs" />
-    <Compile Include="Migrations\201909232206391_InitialModel2.Designer.cs">
-      <DependentUpon>201909232206391_InitialModel2.cs</DependentUpon>
+    <Compile Include="Migrations\201909251953308_InitialModel.cs" />
+    <Compile Include="Migrations\201909251953308_InitialModel.Designer.cs">
+      <DependentUpon>201909251953308_InitialModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Register.cs" />
@@ -248,6 +244,7 @@
     <Content Include="Views\Registration\Details.cshtml" />
     <Content Include="Views\Registration\Edit.cshtml" />
     <Content Include="Views\Registration\Index.cshtml" />
+    <Content Include="Views\Registration\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Scripts\Images\" />
@@ -264,11 +261,8 @@
     <EmbeddedResource Include="Migrations\201909202002206_InitialCreate.resx">
       <DependentUpon>201909202002206_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909202048421_InitialModel.resx">
-      <DependentUpon>201909202048421_InitialModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909232206391_InitialModel2.resx">
-      <DependentUpon>201909232206391_InitialModel2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201909251953308_InitialModel.resx">
+      <DependentUpon>201909251953308_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

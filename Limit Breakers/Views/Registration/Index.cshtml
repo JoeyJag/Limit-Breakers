@@ -1,13 +1,14 @@
 ﻿@model IEnumerable<Limit_Breakers.Models.Register>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Users Table";
 }
 
 <h2>All Registered Users</h2>
 
 <p>
-    @Html.ActionLink("Create New User", "Create")
+    @Html.ActionLink("Create New Account", "Create") <br /> <br />
+    @Html.ActionLink("Already Have An Account", "Login") <br />
 </p>
 <table class="table">
     <tr>

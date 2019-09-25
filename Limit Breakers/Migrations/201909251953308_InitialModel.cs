@@ -7,14 +7,12 @@ namespace Limit_Breakers.Migrations
     {
         public override void Up()
         {
-            DropColumn("dbo.Registers", "DisplayPicture");
-            DropColumn("dbo.Registers", "AccountStatus");
+            AddColumn("dbo.Registers", "ConfirmPassword", c => c.String(nullable: false));
         }
         
         public override void Down()
         {
-            AddColumn("dbo.Registers", "AccountStatus", c => c.String());
-            AddColumn("dbo.Registers", "DisplayPicture", c => c.String());
+            DropColumn("dbo.Registers", "ConfirmPassword");
         }
     }
 }
