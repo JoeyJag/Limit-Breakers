@@ -13,5 +13,8 @@ namespace Limit_Breakers.Models
 
         }
         public DbSet<Register> Register { get; set; }
+        public DbSet<Category> Category { get; set; }
+        public DbSet<Games> Games { get; set; }
+        public DbSet<Review> Review { get; set; }
     }
 }
